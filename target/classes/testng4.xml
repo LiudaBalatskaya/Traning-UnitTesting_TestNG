@@ -1,0 +1,9 @@
+<suite name="Suite4">
+    <test name="Mathematics">
+        <parameter name="figure" value="2" />
+
+        <classes>
+            <class name="ParameterizedXmlTest"/>
+         </classes>
+    </test>
+</suite>

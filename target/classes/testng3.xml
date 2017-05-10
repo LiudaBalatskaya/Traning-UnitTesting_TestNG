@@ -1,0 +1,18 @@
+<test name="Suite3">
+    <groups>
+       <run>
+          <include name="smoke"/>
+          <include name="fast"/>
+       </run>
+    </groups>
+
+    <classes>
+        <class name="MathematicsTest"/>
+        <methods>
+            <include name="addCheck" />
+            <include name="deductCheck" />
+            <include name="multiplyCheck" />
+            <include name="divideCheck" />
+        </methods>
+    </classes>
+</test>
