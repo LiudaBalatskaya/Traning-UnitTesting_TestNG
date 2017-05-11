@@ -1,7 +1,7 @@
 <suite name="Suite4">
     <test name="Mathematics">
-        <parameter name="figure" value="2" />
-
+        <parameter name="figure1" value="2" />
+        <parameter name="figure2" value="4" />
         <classes>
             <class name="ParameterizedXmlTest"/>
          </classes>

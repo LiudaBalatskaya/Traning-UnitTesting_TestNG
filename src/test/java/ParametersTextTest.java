@@ -24,7 +24,6 @@ public class ParametersTextTest {
         int two;
         Object[][] provideData;
         provideData = new  Integer [7][2];
-        //   List<Object[]> provideData = new ArrayList<Object[]>();
         try {
             BufferedReader br = new BufferedReader(new FileReader(FILE_PATH));
             String sCurrentLine;

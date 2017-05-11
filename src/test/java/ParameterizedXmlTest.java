@@ -17,12 +17,13 @@ public class ParameterizedXmlTest {
         calculator = new Mathematics();
         calculator.setResult(0);
     }
+
+    @Parameters({"figure1", "figure2"})
     @Test
-    @Parameters("figure")
-    public void addCheck(int figure) {
-        calculator.add(figure,figure*2);
+    public void addCheck(int figure1, int figure2) {
+        calculator.add(figure1,figure2);
         result = calculator.getResult();
-        assertTrue(result==figure+figure*2);
+        assertTrue(result==figure1+figure2);
         System.out.println("added result=" + result);
     }
 }
