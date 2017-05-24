@@ -1,7 +1,10 @@
 import org.junit.Assert;
 
+import java.util.logging.Logger;
+
 public class Mathematics {
 
+    public final static Logger logger = Logger.getLogger(String.valueOf(Mathematics.class));
 
     private int result;
 

@@ -15,7 +15,7 @@ public class ExpectedExceptionTest {
     }
     @Test(expectedExceptions = ArithmeticException.class)
     public void divideTest()throws InterruptedException {
-        System.out.println("It was a trying to divide on zero");
+        Mathematics.logger.info("It was a trying to divide on zero");
         calculator.divide(25,0);
         result = calculator.getResult();
     }

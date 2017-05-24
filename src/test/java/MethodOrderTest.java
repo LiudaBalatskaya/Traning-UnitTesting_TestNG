@@ -15,12 +15,12 @@ public class MethodOrderTest {
 
     @BeforeClass
     public static void beforeClass(){
-        System.out.println("In beforeClass method");
+        Mathematics.logger.info("In beforeClass method");
     }
 
     @BeforeMethod
     public void initializerTest() {
-        System.out.println("In before the test");
+        Mathematics.logger.info("In before the test");
         calculator = new Mathematics();
         calculator.setResult(0);
     }
@@ -31,6 +31,7 @@ public class MethodOrderTest {
         result = calculator.getResult();
         assertTrue(result==25);
         System.out.println("multiply test");
+        Mathematics.logger.info("multiply test");
     }
 
     @Test(priority = 2)
@@ -38,7 +39,7 @@ public class MethodOrderTest {
         calculator.divide(25,5);
         result = calculator.getResult();
         assertTrue(result==5);
-        System.out.println("divide test");
+        Mathematics.logger.info("divide test");
     }
 
     @Test(priority = 1)
@@ -46,7 +47,7 @@ public class MethodOrderTest {
         calculator.add(2,2);
         result = calculator.getResult();
         assertTrue(result==4);
-        System.out.println("add test");
+        Mathematics.logger.info("add test");
     }
 
     @Test(priority = 4)
@@ -55,7 +56,7 @@ public class MethodOrderTest {
         calculator.deduct(15,5);
         result = calculator.getResult();
         assertTrue(result==10);
-        System.out.println("deduct test");
+        Mathematics.logger.info("deduct test");
     }
 
 }
