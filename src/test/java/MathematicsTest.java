@@ -15,27 +15,23 @@ public class MathematicsTest {
 
     @BeforeClass
     public static void beforeClass(){
-        System.out.println("In beforeClass method");
+        Mathematics.logger.info("In beforeClass method");
     }
-
     @BeforeMethod
     public void initializerTest() {
         calculator = new Mathematics();
         calculator.setResult(0);
     }
-
     @AfterClass
     public static void finishedClass(){
-        System.out.println("Testing is finished");
+        Mathematics.logger.info("Testing is finished");
     }
-
     @Test(groups = {"smoke", "fast"})
     public void addCheck() {
         calculator.add(2,2);
         result = calculator.getResult();
         assertTrue(result==4);
     }
-
     @Test(groups = {"fast"})
     public void deductCheck(){
         calculator.setResult(1);
@@ -43,21 +39,18 @@ public class MathematicsTest {
         result = calculator.getResult();
         assertTrue(result==10);
     }
-
     @Test(groups = {"fast"})
     public void multiplyCheck(){
         calculator.multiply(5,5);
         result = calculator.getResult();
         assertTrue(result==25);
     }
-
     @Test(groups = {"fast"})
     public void divideCheck(){
         calculator.divide(25,5);
         result = calculator.getResult();
         assertTrue(result==5);
     }
-
     @Test(timeOut = 1000)
     public void deductCheckFalse() throws InterruptedException {
         Thread.sleep(5*60*10);

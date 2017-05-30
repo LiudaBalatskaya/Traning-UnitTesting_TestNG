@@ -23,7 +23,7 @@ public class ParameterizedTest {
 
     @BeforeMethod
     public void initializerTest() {
-        System.out.println("In before the test");
+        Mathematics.logger.info("In beforeClass method");
         calculator = new Mathematics();
         calculator.setResult(0);
     }
@@ -33,7 +33,7 @@ public class ParameterizedTest {
         calculator.add(x,y);
         result = calculator.getResult();
         assertTrue(result==x+y);
-        System.out.println("added result=" + result);
+        Mathematics.logger.info("added result="+result );
     }
 
     @Test(dataProvider = "data1")
@@ -41,7 +41,7 @@ public class ParameterizedTest {
         calculator.multiply(x,y);
         result = calculator.getResult();
         assertTrue(result==x*y);
-        System.out.println("multiplied result=" + result);
+        Mathematics.logger.info("multiplied result=" + result );
     }
 
     @Test(dataProvider = "data1")
@@ -49,7 +49,8 @@ public class ParameterizedTest {
         calculator.divide(x,y);
         result = calculator.getResult();
         assertTrue(result==x/y);
-        System.out.println("divided result=" + result);
+        Mathematics.logger.info("divided result=" + result );
+
     }
 
     @Test(dataProvider = "data1")
@@ -58,7 +59,7 @@ public class ParameterizedTest {
         calculator.deduct(x,y);
         result = calculator.getResult();
         assertTrue(result==x-y);
-        System.out.println("deducted result=" + result);
+        Mathematics.logger.info("deducted result=" + result );
     }
 
 }
